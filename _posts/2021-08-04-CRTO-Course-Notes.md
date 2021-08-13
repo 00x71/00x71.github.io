@@ -6,7 +6,7 @@ categories: [TOP_CATEGORIE, SUB_CATEGORIE]
 tags: [T     # TAG names should always be lowercase
 ---
 
-```C#
+```csharp
 [system.reflection.assembly]::LoadFile("file")
  [namespace.class]::Main()
 ```
