@@ -36,12 +36,12 @@ The above snippet will produce a Base64 string which will be supplied in the sni
 ```
 
 
-   -t --> the desired persistence technique.
-   -c --> command to execute.
-   -a --> any arguments for that command.
-   -n --> the name of the task.
-   -m --> to add the task (you can also remove, check and list).
-   -o --> the task frequency.
+   -t --> the desired persistence technique.<br />
+   -c --> command to execute.<br />
+   -a --> any arguments for that command.<br />
+   -n --> the name of the task.<br />
+   -m --> to add the task (you can also remove, check and list).<br />
+   -o --> the task frequency.<br />
    
  -Startup Folder
  
@@ -68,6 +68,6 @@ Output:
 ```
 
 
-   -k --> the registry key to modify.
-   -v --> the name of the registry key to create.
+   -k --> the registry key to modify.<br />
+   -v --> the name of the registry key to create.<br />
 
