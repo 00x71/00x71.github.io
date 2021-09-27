@@ -1,5 +1,6 @@
 ---
 title: "OpenAdmin Writeup – HackTheBox"
+author: 00x71
 date: 2020-03-02
 tags: [HackTheBox, Penetration Testing]
 excerpt: "Hack The Box, Penetration Testing"
