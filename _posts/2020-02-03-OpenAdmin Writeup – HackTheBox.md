@@ -6,7 +6,7 @@ tags: [HackTheBox, Penetration Testing]
 excerpt: "Hack The Box, Penetration Testing"
 mathjax: "true"
 ---
-<img src="./images/OpenAdmin/OpenAdmin.png" style="display: block; margin: auto;" />
+<img src="/images/OpenAdmin/OpenAdmin.png" style="display: block; margin: auto;" />
 
 # Scanning
 
@@ -357,7 +357,7 @@ User joanna may run the following commands on openadmin:
 
 That indicate we can run nano text editor as super user. So we can read files that are in the root directory, for example! lets read the root flag file “root.txt” in the root directory.
 
-<img src="./images/OpenAdmin/OpenAdmin_root.gif" style="display: block; margin: auto;" />
+<img src="/images/OpenAdmin/OpenAdmin_root.gif" style="display: block; margin: auto;" />
 
 And we got the root flag.
 
