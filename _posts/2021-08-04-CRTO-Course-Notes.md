@@ -1,5 +1,6 @@
 ---
 title: CRTO Notes
+author: 00x71
 date: 2021-08-04 21:00:00 0000
 categories: [RED_TEAM, CRTO]
 tags: [C# CRTO REDTEAMING]
