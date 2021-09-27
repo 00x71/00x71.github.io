@@ -1,5 +1,6 @@
 ---
 title: "Traverxec Writeup – HackTheBox"
+author: 00x71
 date: 2020-01-12
 tags: [HackTheBox, Penetration Testing]
 header:
