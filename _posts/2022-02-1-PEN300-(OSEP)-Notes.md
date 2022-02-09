@@ -7,7 +7,7 @@ tags: [Red_Team,OSEP,Offensive-Security]
 ---
 
 
-# Disbale Anti-Virus
+# Disable Anti-Virus
 
 ## Disable Windows Defender
 ```powershell
