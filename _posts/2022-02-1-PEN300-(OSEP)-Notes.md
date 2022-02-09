@@ -3,7 +3,7 @@ title: Offensive-Security PEN-300 Notes
 author: 00x71
 date: 2022-02-01 21:00:00 0000
 categories: [RED_TEAM, OSEP,Offensive-Security]
-tags: [C# CRTO REDTEAMING]
+tags: [Red_Team,OSEP,Offensive-Security]
 ---
 
 
