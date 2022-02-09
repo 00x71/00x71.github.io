@@ -24,9 +24,9 @@ or
 cmd /c "C:\Program Files\Windows Defender\MpCmdRun.exe" -removedefinitions -all
 ```
 
-#Anti-Virus Evasion
+# Anti-Virus Evasion
 
-#Shellcode XOR Encryptor
+## Shellcode XOR Encryptor
 
 ```CSharp
 using System;
