@@ -26,7 +26,7 @@ cmd /c "C:\Program Files\Windows Defender\MpCmdRun.exe" -removedefinitions -all
 
 # Anti-Virus Evasion
 
-## Shellcode XOR Encryptor
+## Shellcode XOR Encryptor Written in C#
 
 ```CSharp
 using System;
