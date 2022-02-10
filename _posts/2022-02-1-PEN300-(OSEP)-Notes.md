@@ -168,7 +168,7 @@ crackmapexec mssql -d <Domain name> -u <username> -H <HASH> -X '$PSVersionTable'
 
 ## Abuse MSSQL Trusted Links
 
-### Using PowerUpSQL.ps1
+### Using PowerUpSQL.ps1 (Thanks to https://book.hacktricks.xyz/windows/active-directory-methodology/mssql-trusted-links)
 
 ```powershell
 Import-Module .\PowerupSQL.psd1
