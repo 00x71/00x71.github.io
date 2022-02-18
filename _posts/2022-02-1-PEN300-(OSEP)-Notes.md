@@ -138,7 +138,7 @@ namespace PowerShell_RunSpace
 
 To bypass/disable LSA protection to dump hashes, we need to have the `SeLoadDriverPrivilege` privilege enabled to load `mimidrv.sys` driver. By default the `NT AUTHORITY\SYSTEM` account has the highest privileges on the local computer and it has the `SeLoadDriverPrivilege` privilege enabled. 
 
-First e have to upload the `mimidrv.sys` driver to the target and place it in the same directory as `Mimikatz`. Then load the driver by using the command `!+` from Mimikatz prompt:
+First, upload the `mimidrv.sys` driver to the target and place it in the same directory as `Mimikatz`. Then load the driver by using the command `!+` from Mimikatz prompt:
 
 ```
 mimikatz # !+ 
