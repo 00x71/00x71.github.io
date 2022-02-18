@@ -157,7 +157,7 @@ PID 536 -> 00/00 [0-0-0]
 One drwaback of this technique is it require to upload the `minidrv.sys` driver to the target, which most likely it will be flagged by anti-virus. Ensure that the AV is disabled before using thie method.
 
 
-# Attacking MSSQL 
+# Attacking Microsoft SQL Servers 
 
 ## Microsoft SQL Server Enumration using PowerUpSQL.ps1
 
